@@ -5,13 +5,13 @@
 23432 -> да
 */
 
-string IsPalindrome(string number)
+string IsPalindrome(int number)
 {
   int i = 0;
-  char[] arr = number.ToCharArray();
-  while (i < number.Length/2)
+  char[] arr = number.ToString().ToCharArray();
+  while (i < arr.Length/2)
   {
-    if ( arr[i] != arr[number.Length - 1 - i])
+    if ( arr[i] != arr[arr.Length - 1 - i])
     {
       return "NO";
     }
@@ -20,13 +20,13 @@ string IsPalindrome(string number)
   return "YES";
 }
 
-string GetNumber(string text)
+int GetNumber(string text)
 {
   Console.Write(text);
-  string number = Console.ReadLine();
+  int number = int.Parse(Console.ReadLine());
   return number;
 }
 
-string num = GetNumber("Enter your number: ");
+int num = GetNumber("Enter your number: ");
 
 Console.Write("Is it Palindrome?  " + IsPalindrome(num));
