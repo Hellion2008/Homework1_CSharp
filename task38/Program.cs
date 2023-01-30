@@ -5,7 +5,7 @@
 
 void ShowDif(double[] arr)
 {
-  Console.Write("[" + string.Join(", ", arr) + "] -> " + GetDif(arr));
+  Console.Write("[" + string.Join("; ", arr) + "] -> " + GetDif(arr));
 }
 
 double GetDif(double[] arr)
