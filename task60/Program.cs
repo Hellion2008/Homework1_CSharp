@@ -33,7 +33,6 @@ int[,,] GetArray3D()
         if (i == 0 && j == 0 && k == 0)
         {
           arr[i, j, k] = new Random().Next(10, 100);
-          //Console.WriteLine($"число {arr[i, j, k]} i = {i} j = {j} k = {k}");
           list.Add(arr[i, j, k]);
         }
         else
@@ -42,21 +41,13 @@ int[,,] GetArray3D()
           while (list.Contains(arr[i, j, k]))
           {
             arr[i, j, k] = new Random().Next(10, 100);
-           // Console.WriteLine($"111     {arr[i, j, k]}");
           }
-
-          //Console.WriteLine($"число {arr[i, j, k]} i = {i} j = {j} k = {k}");
           list.Add(arr[i, j, k]);
 
         }
       }
     }
   }
-  // foreach (var item in list)
-  // {
-  //   Console.Write(item + " ");
-  // }
-  // Console.WriteLine("\n" + list.Count);
   return arr;
 }
 
